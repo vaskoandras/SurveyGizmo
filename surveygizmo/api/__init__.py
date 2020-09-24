@@ -9,6 +9,7 @@ from .contactlist import ContactList
 from .emailmessage import EmailMessage
 from .survey import Survey
 from .surveycampaign import SurveyCampaign
+from .surveycontact import SurveyContact
 from .surveyoption import SurveyOption
 from .surveypage import SurveyPage
 from .surveyquestion import SurveyQuestion
@@ -26,6 +27,7 @@ __all__ = [
     'EmailMessage',
     'Survey',
     'SurveyCampaign',
+    'SurveyContact',
     'SurveyOption',
     'SurveyPage',
     'SurveyQuestion',

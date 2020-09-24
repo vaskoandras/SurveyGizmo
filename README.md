@@ -150,6 +150,10 @@ After SurveyGizmo's move to CloudFlare, it isn't uncommon to see connectivity is
 
 ## Changelog
 
+### 1.2.4
+
+- #28 Added support for SurveyContact class
+
 ### 1.2.3
 
 - #21 Make the 'base_url' configurable.
