@@ -21,6 +21,7 @@ class APIMetaTests(TestCase):
         self.assertIsInstance(client.api.emailmessage, api.emailmessage.EmailMessage)
         self.assertIsInstance(client.api.survey, api.survey.Survey)
         self.assertIsInstance(client.api.surveycampaign, api.surveycampaign.SurveyCampaign)
+        self.assertIsInstance(client.api.surveycontact, api.surveycontact.SurveyContact)
         self.assertIsInstance(client.api.surveyoption, api.surveyoption.SurveyOption)
         self.assertIsInstance(client.api.surveypage, api.surveypage.SurveyPage)
         self.assertIsInstance(client.api.surveyquestion, api.surveyquestion.SurveyQuestion)

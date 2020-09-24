@@ -243,6 +243,35 @@ class SurveyCampaignTests(TestCase):
         self.assertEqual(path, 'head/survey/1/surveycampaign/1')
 
 
+class SurveyContactTests(TestCase):
+    resource = client.api.surveycontact
+
+    def test_list(self):
+        path, params = self.resource.list(1, 1)
+        self.assertEqual(path, 'head/survey/1/surveycampaign/1/surveycontact/')
+
+    def test_get(self):
+        path, params = self.resource.get(1, 1, 1)
+        self.assertEqual(path, 'head/survey/1/surveycampaign/1/surveycontact/1')
+
+    def test_create(self):
+        path, params = self.resource.create(1, 1, 'user@example.com')
+        self.assertEqual(path, 'head/survey/1/surveycampaign/1/surveycontact/')
+        self.assertEqual(params['semailaddress'], 'user@example.com')
+
+    def test_update(self):
+        path, params = self.resource.update(1, 1, 1)
+        self.assertEqual(path, 'head/survey/1/surveycampaign/1/surveycontact/1')
+
+    def test_copy(self):
+        with self.assertRaises(NotImplementedError):
+            self.resource.copy()
+
+    def test_delete(self):
+        path, params = self.resource.delete(1, 1, 1)
+        self.assertEqual(path, 'head/survey/1/surveycampaign/1/surveycontact/1')
+
+
 class SurveyOptionTests(TestCase):
     resource = client.api.surveyoption
 
